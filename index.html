@@ -341,7 +341,7 @@
   document.getElementById('lineBtn').addEventListener('click',function(){
     var text=orderText();
     if(!text){msgEl.className='msg';msgEl.textContent='購物車是空的，請先選購。';return;}
-    text=text.replace('【金太郎 中秋禮盒｜訂單】','【金太郎 中秋禮盒｜LINE 估價】')
+    text=text.replace('【金太郎 中秋禮盒｜訂單】','【林博｜LINE 估價】')
              .replace('※ 金額為估算，實際運費以集運秤重為準。','※ 估價金額僅供參考，以店家最終報價為主。');
     function opened(){msgEl.className='msg ok';msgEl.textContent='✓ 估價單已複製！已為您開啟店家 LINE，貼上後傳送即可。';}
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){window.open(window.KINTARO_LINE_URL,'_blank');opened();},function(){fb(text);window.open(window.KINTARO_LINE_URL,'_blank');opened();});}else{fb(text);window.open(window.KINTARO_LINE_URL,'_blank');opened();}
