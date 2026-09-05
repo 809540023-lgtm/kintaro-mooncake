@@ -227,6 +227,7 @@
 <script>
   // 店家收單 Email（改這裡即可換收件信箱）
   window.KINTARO_ORDER_EMAIL = "cia8885@gmail.com";
+  window.KINTARO_LINE_URL = "https://lin.ee/xtBgE5B";
   window.KINTARO_RATE = 0.21;
   var SHIP_ZONE1=[[500,1450],[600,1600],[700,1750],[800,1900],[900,2050],[1000,2200],[1250,2500],[1500,2800],[1750,3100],[2000,3400],[2500,3900],[3000,4400],[3500,4900],[4000,5400],[4500,5900],[5000,6400],[5500,6900],[6000,7400],[7000,8200],[8000,9000],[9000,9800],[10000,10600],[11000,11400],[12000,12200],[13000,13000],[14000,13800],[15000,14600],[16000,15400],[17000,16200],[18000,17000],[19000,17800],[20000,18600],[21000,19400],[22000,20200],[23000,21000],[24000,21800],[25000,22600],[26000,23400],[27000,24200],[28000,25000],[29000,25800],[30000,26600]];
   var DEFAULT_WEIGHT=500;
@@ -342,8 +343,8 @@
     if(!text){msgEl.className='msg';msgEl.textContent='購物車是空的，請先選購。';return;}
     text=text.replace('【金太郎 中秋禮盒｜訂單】','【金太郎 中秋禮盒｜LINE 估價】')
              .replace('※ 金額為估算，實際運費以集運秤重為準。','※ 估價金額僅供參考，以店家最終報價為主。');
-    msgEl.className='msg';msgEl.textContent='已開啟 LINE，請選擇店家的官方帳號聊天室，貼上後送出。';
-    window.open('https://line.me/R/share?text='+encodeURIComponent(text),'_blank');
+    function opened(){msgEl.className='msg ok';msgEl.textContent='✓ 估價單已複製！已為您開啟店家 LINE，貼上後傳送即可。';}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){window.open(window.KINTARO_LINE_URL,'_blank');opened();},function(){fb(text);window.open(window.KINTARO_LINE_URL,'_blank');opened();});}else{fb(text);window.open(window.KINTARO_LINE_URL,'_blank');opened();}
   });
 
   function boot(list){
