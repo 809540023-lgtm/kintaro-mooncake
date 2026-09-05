@@ -1,0 +1,27 @@
+{
+  "urls": {
+    "bretonne": "https://www.bretonne-bis.com/",
+    "clubharie": "https://clubharie.jp/",
+    "boulmich": "https://www.boulmich.co.jp/",
+    "gokan": "https://www.patisserie-gokan.co.jp/",
+    "kameda": "https://www.kamedaseika.co.jp/",
+    "sugarbuttertree": "https://www.sugarbuttertree.jp/",
+    "tuliprose": "https://www.tuliprose.jp/",
+    "keishindo": "https://www.keishindo-shop.com/",
+    "kurakichi": "https://kurakichiweb.shop5.makeshop.jp/",
+    "yokumoku": "https://www.yokumoku.co.jp/"
+  },
+  "rules": [
+    ["ブルトンヌ", "bretonne"], ["ディアマン", "bretonne"], ["フィナンシェアソルティ", "bretonne"], ["サブレ", "bretonne"],
+    ["めで鯛", "clubharie"], ["ハリエ", "clubharie"], ["リーフパイ", "clubharie"], ["LEAF PIE", "clubharie"],
+    ["アーモンドパイ", "clubharie"], ["スティックパイ", "clubharie"], ["STICK PIE", "clubharie"], ["MEDETAI", "clubharie"],
+    ["トリュフ", "boulmich"], ["グランリュクス", "boulmich"], ["マロン", "boulmich"], ["BOUE", "boulmich"],
+    ["五感", "gokan"], ["重巻", "gokan"], ["最中クッキー", "gokan"], ["ベイクフル", "gokan"], ["檸檬サンド", "gokan"], ["GOKAN", "gokan"],
+    ["柿の種", "kameda"], ["タネビッツ", "kameda"], ["せんべい", "kameda"], ["たこやき", "kameda"], ["うるち米", "kameda"], ["スパイシー", "kameda"],
+    ["シュガーバター", "sugarbuttertree"], ["BUTTER SAND", "sugarbuttertree"],
+    ["チューリップ", "tuliprose"], ["TULIP", "tuliprose"],
+    ["海老", "keishindo"], ["車えび", "keishindo"],
+    ["あきた", "kurakichi"], ["KURAKICHI", "kurakichi"],
+    ["YOKUMOKU", "yokumoku"], ["ヨックモック", "yokumoku"]
+  ]
+}

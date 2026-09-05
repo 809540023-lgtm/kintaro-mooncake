@@ -33,6 +33,26 @@ python3 -m http.server 8080
 | `images` | 圖片路徑陣列（`images/xxx.jpg`） |
 | `labelImg` | 選用：該商品價目標籤照片路徑（辨識用，前台不顯示） |
 
+## 持續新增商品（進貨管線）
+
+店家會在 Google 雲端硬碟按日期開新資料夾放商品照片（每組 4 張：1 張價目標籤 + 3 張商品照）。
+把新資料夾丟進來後，跑：
+
+```bash
+python3 tools/ingest.py --src "/新的照片資料夾路徑"            # 實際寫入
+python3 tools/ingest.py --src "/新的照片資料夾路徑" --dry-run   # 先預覽不寫入
+```
+
+腳本會自動：轉檔壓縮 → OCR 讀價目標籤 → 依拍攝時間與標籤分組 → 擷取品名／稅込價格／入數 → 編號接續併入 `products.json` 與 `images/`。
+辨識規則與品牌官網對應放在 `tools/title-fixes.json`、`tools/brands.json`，遇到新品名或新品牌就往這兩個檔加規則。
+OCR 使用 macOS 內建 Vision（`tools/ocr.swift`，首次執行會自動編譯），需在 Mac 上執行。
+
+## 購物車送出 LINE@ 估價
+
+購物車面板新增「📱 用 LINE 發送估價」：點擊後會把手機導向 LINE 的分享畫面並帶入商品明細
+（品名 × 數量、JPY 小計、運費估算、收件人資料），顧客選擇店家的官方帳號聊天室即可送出估價。
+金額僅供參考，以最終報價為主。
+
 ## 訂單信箱啟用
 
 第一次有人送出訂單時，FormSubmit 會寄一封啟用信到店家信箱，點信中連結啟用一次後即可正常收單。
