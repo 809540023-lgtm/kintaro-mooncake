@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>金太郎 中秋甜品禮盒</title>
+<title>林博 中秋甜品禮盒</title>
 <meta name="description" content="日本甜品中秋禮盒・日本直送代購">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -161,8 +161,8 @@
 <main class="wrap">
   <div class="topbar">
     <div class="brandmark">
-      <svg class="seal" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="var(--aka)" stroke-width="5"/><circle cx="50" cy="50" r="38" fill="var(--aka)"/><text x="50" y="50" text-anchor="middle" dominant-baseline="central" font-family="var(--serif)" font-weight="900" font-size="46" fill="#FBF1D0">金</text></svg>
-      <div><div class="name">金太郎</div><div class="en">KINTARO ・ 日本甜品直送</div></div>
+      <svg class="seal" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="var(--aka)" stroke-width="5"/><circle cx="50" cy="50" r="38" fill="var(--aka)"/><text x="50" y="50" text-anchor="middle" dominant-baseline="central" font-family="var(--serif)" font-weight="900" font-size="46" fill="#FBF1D0">林</text></svg>
+      <div><div class="name">林博</div><div class="en">LINBO ・ 日本甜品直送</div></div>
     </div>
     <button class="theme-toggle" id="themeBtn" aria-label="切換深淺色">☾ 夜 / 晝</button>
   </div>
@@ -238,7 +238,7 @@
 
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   function money(n){return Math.round(n).toLocaleString('en-US');}
-  var emptySeal='<div class="sealwrap"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="none" stroke="var(--kin)" stroke-width="4" stroke-dasharray="6 7"/><text x="50" y="50" text-anchor="middle" dominant-baseline="central" font-family="var(--serif)" font-weight="900" font-size="40" fill="var(--kin)">金</text></svg></div>';
+  var emptySeal='<div class="sealwrap"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="none" stroke="var(--kin)" stroke-width="4" stroke-dasharray="6 7"/><text x="50" y="50" text-anchor="middle" dominant-baseline="central" font-family="var(--serif)" font-weight="900" font-size="40" fill="var(--kin)">林</text></svg></div>';
 
   var grid=document.getElementById('grid');
   var products=[], cart={}, rate=Number(window.KINTARO_RATE)||0.21, boxWeight=DEFAULT_WEIGHT;
@@ -306,7 +306,7 @@
   function orderText(){
     var c=calc();if(!c.keys.length)return null;
     var itemsTWD=Math.round(c.itemsJPY*rate),shipTWD=c.shipJPY!=null?Math.round(c.shipJPY*rate):null;
-    var L=['【金太郎 中秋禮盒｜訂單】',''];
+    var L=['【林博 中秋禮盒｜訂單】',''];
     c.keys.forEach(function(k){var p=prod(k);L.push('・'+p.title+' ×'+cart[k]+'（JP¥'+money(p.priceJPY)+'/'+(p.qtyDesc||'份')+'）');});
     L.push('');L.push('商品合計：JP¥'+money(c.itemsJPY)+'（約 NT$'+money(itemsTWD)+'）');
     L.push('運費(第1地帶,約'+c.totalW+'g)：'+(c.shipJPY!=null?'JP¥'+money(c.shipJPY)+'（約 NT$'+money(shipTWD)+'）':'超過30kg，另洽'));
@@ -325,7 +325,7 @@
     var btn=this;btn.disabled=true;msgEl.className='msg';msgEl.textContent='送出中…';
     fetch('https://formsubmit.co/ajax/'+encodeURIComponent(window.KINTARO_ORDER_EMAIL),{
       method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify({_subject:'【金太郎】新訂單 - '+name,姓名:name,電話:phone,地址:addr,訂單明細:text})
+      body:JSON.stringify({_subject:'【林博】新訂單 - '+name,姓名:name,電話:phone,地址:addr,訂單明細:text})
     }).then(function(r){return r.json();}).then(function(d){
       if(d&&(d.success==='true'||d.success===true)){msgEl.className='msg ok';msgEl.textContent='✓ 感謝您的預定！工作人員會盡快與您聯絡。（國際運費以實際估算為主）';cart={};saveCart();updateCart();}
       else{throw new Error('fail');}
@@ -341,7 +341,7 @@
   document.getElementById('lineBtn').addEventListener('click',function(){
     var text=orderText();
     if(!text){msgEl.className='msg';msgEl.textContent='購物車是空的，請先選購。';return;}
-    text=text.replace('【金太郎 中秋禮盒｜訂單】','【林博｜LINE 估價】')
+    text=text.replace('【林博 中秋禮盒｜訂單】','【林博｜LINE 估價】')
              .replace('※ 金額為估算，實際運費以集運秤重為準。','※ 估價金額僅供參考，以店家最終報價為主。');
     function opened(){msgEl.className='msg ok';msgEl.textContent='✓ 估價單已複製！已為您開啟店家 LINE，貼上後傳送即可。';}
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){window.open(window.KINTARO_LINE_URL,'_blank');opened();},function(){fb(text);window.open(window.KINTARO_LINE_URL,'_blank');opened();});}else{fb(text);window.open(window.KINTARO_LINE_URL,'_blank');opened();}
