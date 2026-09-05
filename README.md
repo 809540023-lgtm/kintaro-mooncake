@@ -31,6 +31,7 @@ python3 -m http.server 8080
 | `priceJPY` | 純數字日圓價（購物車計算用） |
 | `weight_g` | 每盒重量（0＝用購物車預設值估算） |
 | `images` | 圖片路徑陣列（`images/xxx.jpg`） |
+| `labelImg` | 選用：該商品價目標籤照片路徑（辨識用，前台不顯示） |
 
 ## 訂單信箱啟用
 
