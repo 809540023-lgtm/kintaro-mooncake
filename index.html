@@ -60,6 +60,10 @@
   .sec-head .zh{font-family:var(--serif);font-weight:900;font-size:1.75rem;letter-spacing:.05em}
   .sec-head .jp{font-family:var(--jp);font-size:.78rem;letter-spacing:.3em;color:var(--muted)}
   .sec-head .rule{flex:1;height:1px;background:var(--line);align-self:center}
+  .ainote{display:flex;gap:10px;align-items:center;background:var(--kin-soft);border:1px dashed var(--kin);border-radius:12px;padding:12px 18px;margin:0 0 22px;color:var(--ink);font-size:.9rem;line-height:1.6}
+  .ainote b{color:var(--aka)}
+  .card .brand{font-family:var(--jp);font-size:.78rem;color:var(--kin);text-decoration:none;border-bottom:1px dashed var(--kin);letter-spacing:.04em;align-self:flex-start}
+  .card .brand:hover{color:var(--aka);border-color:var(--aka)}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   @media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:560px){.grid{grid-template-columns:1fr}}
@@ -174,6 +178,7 @@
   </section>
   <section class="section" id="products">
     <div class="sec-head"><span class="zh">本季精選禮盒</span><span class="jp">SELECTION</span><span class="rule"></span></div>
+    <div class="ainote" role="note">🤖 本商品系統為精簡人事成本，由 AI 自動辨識照片建檔；品名與價格僅供參考，<b>以最終報價為主</b>。</div>
     <div class="grid" id="grid"></div>
   </section>
   <section class="section" id="order">
@@ -258,8 +263,9 @@
       var mp=[];if(p.price)mp.push('<span class="price">'+esc(p.price)+'</span>');if(p.qtyDesc)mp.push('<span class="price" style="color:var(--kin);font-size:1rem">'+esc(p.qtyDesc)+'</span>');
       var meta=mp.length?'<div style="display:flex;gap:16px;align-items:baseline;flex-wrap:wrap">'+mp.join('')+'</div>':'';
       var desc=p.desc?'<div class="desc">'+esc(p.desc)+'</div>':'<div class="desc"></div>';
+      var brand=p.officialUrl?'<a class="brand" href="'+esc(p.officialUrl)+'" target="_blank" rel="noopener">日本原廠官網 ↗</a>':'';
       var buy=p.priceJPY>0?'<div class="buy"><div class="stepper"><button type="button" data-step="-1" data-idx="'+p.idx+'" aria-label="減少">−</button><input type="text" inputmode="numeric" value="1" data-qty="'+p.idx+'" aria-label="數量"><button type="button" data-step="1" data-idx="'+p.idx+'" aria-label="增加">＋</button></div><button class="addbtn" data-add="'+p.idx+'">加入購物車</button></div>':'<div class="buy"><button class="addbtn nostock" disabled>價格未辨識</button></div>';
-      html+='<div class="card"><div class="ph"><img id="cover-'+p.idx+'" loading="lazy" alt="'+esc(p.title)+'" src="'+esc(p.images[0])+'">'+count+'</div><div class="body"><div class="title">'+esc(p.title)+'</div>'+desc+meta+'</div>'+thumbs+buy+'</div>';
+      html+='<div class="card"><div class="ph"><img id="cover-'+p.idx+'" loading="lazy" alt="'+esc(p.title)+'" src="'+esc(p.images[0])+'">'+count+'</div><div class="body"><div class="title">'+esc(p.title)+'</div>'+brand+desc+meta+'</div>'+thumbs+buy+'</div>';
     });
     grid.innerHTML=html||'';
     if(!grid.innerHTML){renderEmpty();return;}
@@ -328,7 +334,7 @@
   function fb(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);}
 
   function boot(list){
-    products=(Array.isArray(list)?list:[]).map(function(p,i){return {idx:i,title:p.title||('商品 '+(i+1)),desc:p.desc||'',price:p.price||'',qtyDesc:p.qty||'',priceJPY:Number(p.priceJPY)||0,weight_g:Number(p.weight_g)||0,images:Array.isArray(p.images)?p.images:[]};});
+    products=(Array.isArray(list)?list:[]).map(function(p,i){return {idx:i,title:p.title||('商品 '+(i+1)),desc:p.desc||'',price:p.price||'',qtyDesc:p.qty||'',priceJPY:Number(p.priceJPY)||0,weight_g:Number(p.weight_g)||0,images:Array.isArray(p.images)?p.images:[],officialUrl:p.officialUrl||''};});
     if(products.length)renderProducts();else renderEmpty();
     updateCart();
   }
