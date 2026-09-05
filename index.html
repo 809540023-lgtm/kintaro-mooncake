@@ -60,8 +60,9 @@
   .sec-head .zh{font-family:var(--serif);font-weight:900;font-size:1.75rem;letter-spacing:.05em}
   .sec-head .jp{font-family:var(--jp);font-size:.78rem;letter-spacing:.3em;color:var(--muted)}
   .sec-head .rule{flex:1;height:1px;background:var(--line);align-self:center}
-  .ainote{display:flex;gap:10px;align-items:center;background:var(--kin-soft);border:1px dashed var(--kin);border-radius:12px;padding:12px 18px;margin:0 0 22px;color:var(--ink);font-size:.9rem;line-height:1.6}
-  .ainote b{color:var(--aka)}
+  .ainote{display:flex;gap:12px;align-items:center;background:var(--kin-soft);border:2px solid var(--kin);border-radius:14px;padding:18px 24px;margin:0 0 28px;font-size:1.1rem;line-height:1.7;font-weight:600;letter-spacing:.02em}
+  .ainote .ic{font-size:1.6rem;flex:0 0 auto}
+  .ainote b{color:var(--aka);font-size:1.18rem;font-weight:900}
   .card .brand{font-family:var(--jp);font-size:.78rem;color:var(--kin);text-decoration:none;border-bottom:1px dashed var(--kin);letter-spacing:.04em;align-self:flex-start}
   .card .brand:hover{color:var(--aka);border-color:var(--aka)}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -178,7 +179,7 @@
   </section>
   <section class="section" id="products">
     <div class="sec-head"><span class="zh">本季精選禮盒</span><span class="jp">SELECTION</span><span class="rule"></span></div>
-    <div class="ainote" role="note">🤖 本商品系統為精簡人事成本，由 AI 自動辨識照片建檔；品名與價格僅供參考，<b>以最終報價為主</b>。</div>
+    <div class="ainote" role="note"><span class="ic">🤖</span><span>此商品系統為精簡人事成本，為 AI 自行辨識，所以<b>以最終報價為主</b>。</span></div>
     <div class="grid" id="grid"></div>
   </section>
   <section class="section" id="order">
