@@ -326,7 +326,7 @@
       method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify({_subject:'【金太郎】新訂單 - '+name,姓名:name,電話:phone,地址:addr,訂單明細:text})
     }).then(function(r){return r.json();}).then(function(d){
-      if(d&&(d.success==='true'||d.success===true)){msgEl.className='msg ok';msgEl.textContent='✓ 訂單已送出，我們會盡快與您聯絡！';cart={};saveCart();updateCart();}
+      if(d&&(d.success==='true'||d.success===true)){msgEl.className='msg ok';msgEl.textContent='✓ 感謝您的預定！工作人員會盡快與您聯絡。（國際運費以實際估算為主）';cart={};saveCart();updateCart();}
       else{throw new Error('fail');}
     }).catch(function(){msgEl.className='msg';msgEl.textContent='送出失敗，請改用下方「複製訂單明細」傳給我們。';}).finally(function(){btn.disabled=false;});
   });
