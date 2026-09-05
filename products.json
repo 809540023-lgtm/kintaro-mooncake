@@ -5,7 +5,7 @@
     "price": "日本售價 JP¥1,998（含稅）",
     "qty": "20 支入",
     "priceJPY": 1998,
-    "weight_g": 0,
+    "weight_g": 520,
     "officialUrl": "https://www.yokumoku.co.jp/",
     "images": [
       "images/yokumoku-1.jpg",
@@ -177,7 +177,7 @@
     "price": "日本售價 JP¥451（含稅）",
     "qty": "5個入",
     "priceJPY": 451,
-    "weight_g": 0,
+    "weight_g": 85,
     "officialUrl": "https://www.sugarbuttertree.jp/",
     "images": [
       "images/p11-1.jpg",
@@ -192,7 +192,7 @@
     "price": "日本售價 JP¥1,944（含稅）",
     "qty": "9個入",
     "priceJPY": 1944,
-    "weight_g": 0,
+    "weight_g": 263,
     "officialUrl": "https://www.tuliprose.jp/",
     "images": [
       "images/p12-1.jpg",
@@ -328,7 +328,7 @@
     "price": "日本售價 JP¥2,160（含稅）",
     "qty": "6個入",
     "priceJPY": 2160,
-    "weight_g": 0,
+    "weight_g": 550,
     "officialUrl": "https://www.boulmich.co.jp/",
     "images": [
       "images/p20-1.jpg",
@@ -604,7 +604,7 @@
     "price": "日本售價 JP¥7,020（含稅）",
     "qty": "1 入",
     "priceJPY": 7020,
-    "weight_g": 0,
+    "weight_g": 480,
     "officialUrl": "https://kurakichiweb.shop5.makeshop.jp/",
     "images": [
       "images/p36-1.jpg",
