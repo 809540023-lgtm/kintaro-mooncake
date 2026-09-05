@@ -238,9 +238,10 @@ def main():
             if not srcf:
                 continue
             dst = imgdir / f'p{maxn:02d}-{k}.jpg'
-            im = Image.open(srcf).convert('RGB')
-            im.thumbnail((1200, 1200))
-            im.save(dst, quality=78)
+            if not args.dry_run:
+                im = Image.open(srcf).convert('RGB')
+                im.thumbnail((1200, 1200))
+                im.save(dst, quality=78)
             files_out.append(f'images/{dst.name}')
         entry = {
             'title': name, 'desc': '',
