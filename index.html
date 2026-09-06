@@ -227,6 +227,7 @@
 <script>
   // 店家收單 Email（改這裡即可換收件信箱）
   window.KINTARO_ORDER_EMAIL = "cia8885@gmail.com";
+  window.KINTARO_ORDER_API = "";  // ← 貼上 Google Apps Script 網址後，訂單改走自己的 Gmail（穩定）
   window.KINTARO_LINE_URL = "https://lin.ee/xtBgE5B";
   window.KINTARO_RATE = 0.21;
   var SHIP_ZONE1=[[500,1450],[600,1600],[700,1750],[800,1900],[900,2050],[1000,2200],[1250,2500],[1500,2800],[1750,3100],[2000,3400],[2500,3900],[3000,4400],[3500,4900],[4000,5400],[4500,5900],[5000,6400],[5500,6900],[6000,7400],[7000,8200],[8000,9000],[9000,9800],[10000,10600],[11000,11400],[12000,12200],[13000,13000],[14000,13800],[15000,14600],[16000,15400],[17000,16200],[18000,17000],[19000,17800],[20000,18600],[21000,19400],[22000,20200],[23000,21000],[24000,21800],[25000,22600],[26000,23400],[27000,24200],[28000,25000],[29000,25800],[30000,26600]];
@@ -323,13 +324,22 @@
     var name=document.getElementById('custName').value.trim(),phone=document.getElementById('custPhone').value.trim(),addr=document.getElementById('custAddr').value.trim();
     if(!name||!phone||!addr){msgEl.className='msg';msgEl.textContent='請先填寫姓名、電話、地址。';return;}
     var btn=this;btn.disabled=true;msgEl.className='msg';msgEl.textContent='送出中…';
+    function okMsg(){msgEl.className='msg ok';msgEl.textContent='✓ 感謝您的預定！工作人員會盡快與您聯絡。（國際運費以實際估算為主）';cart={};saveCart();updateCart();}
+    if(window.KINTARO_ORDER_API){
+      fetch(window.KINTARO_ORDER_API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({_subject:'【林博】新訂單 - '+name,姓名:name,電話:phone,地址:addr,訂單明細:text})})
+      .then(function(r){return r.json();}).then(function(d){
+        if(d&&d.status==='ok'){okMsg();}
+        else{throw new Error('fail');}
+      }).catch(function(){msgEl.className='msg';msgEl.textContent='送出失敗，請改用下方「複製訂單明細」傳給我們。';}).finally(function(){btn.disabled=false;});
+    }else{
     fetch('https://formsubmit.co/ajax/'+encodeURIComponent(window.KINTARO_ORDER_EMAIL),{
       method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify({_subject:'【林博】新訂單 - '+name,姓名:name,電話:phone,地址:addr,訂單明細:text})
     }).then(function(r){return r.json();}).then(function(d){
-      if(d&&(d.success==='true'||d.success===true)){msgEl.className='msg ok';msgEl.textContent='✓ 感謝您的預定！工作人員會盡快與您聯絡。（國際運費以實際估算為主）';cart={};saveCart();updateCart();}
+      if(d&&(d.success==='true'||d.success===true)){okMsg();}
       else{throw new Error('fail');}
     }).catch(function(){msgEl.className='msg';msgEl.textContent='送出失敗，請改用下方「複製訂單明細」傳給我們。';}).finally(function(){btn.disabled=false;});
+    }
   });
   document.getElementById('copyBtn').addEventListener('click',function(){
     var text=orderText();if(!text){msgEl.className='msg';msgEl.textContent='購物車是空的。';return;}
