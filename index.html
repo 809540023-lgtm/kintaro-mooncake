@@ -332,13 +332,10 @@
         else{throw new Error('fail');}
       }).catch(function(){msgEl.className='msg';msgEl.textContent='送出失敗，請改用下方「複製訂單明細」傳給我們。';}).finally(function(){btn.disabled=false;});
     }else{
-    fetch('https://formsubmit.co/ajax/'+encodeURIComponent(window.KINTARO_ORDER_EMAIL),{
-      method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify({_subject:'【林博】新訂單 - '+name,姓名:name,電話:phone,地址:addr,訂單明細:text})
-    }).then(function(r){return r.json();}).then(function(d){
-      if(d&&(d.success==='true'||d.success===true)){okMsg();}
-      else{throw new Error('fail');}
-    }).catch(function(){msgEl.className='msg';msgEl.textContent='送出失敗，請改用下方「複製訂單明細」傳給我們。';}).finally(function(){btn.disabled=false;});
+      var mail='mailto:'+encodeURIComponent(window.KINTARO_ORDER_EMAIL)+'?subject='+encodeURIComponent('【林博】新訂單 - '+name)+'&body='+encodeURIComponent(text);
+      window.location.href=mail;
+      msgEl.className='msg ok';msgEl.textContent='✓ 已為您開啟郵件程式，按「傳送」即完成預定，工作人員會盡快聯絡您！（國際運費以實際估算為主）';
+      btn.disabled=false;
     }
   });
   document.getElementById('copyBtn').addEventListener('click',function(){
