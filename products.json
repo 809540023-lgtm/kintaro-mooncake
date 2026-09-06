@@ -732,5 +732,227 @@
       "images/p43-5.jpg"
     ],
     "labelImg": "images/p43-5.jpg"
+  },
+  {
+    "title": "OKINI 菓子工房 CARAMELCHAUCHAU",
+    "desc": "",
+    "price": "日本售價 JP¥594（含稅）",
+    "qty": "6袋",
+    "priceJPY": 594,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p44-1.jpg",
+      "images/p44-2.jpg",
+      "images/p44-3.jpg",
+      "images/p44-4.jpg"
+    ],
+    "labelImg": "images/p44-4.jpg"
+  },
+  {
+    "title": "koe dounuts クッキー缶",
+    "desc": "",
+    "price": "日本售價 JP¥2,281（含稅）",
+    "qty": "12枚",
+    "priceJPY": 2281,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p45-1.jpg",
+      "images/p45-2.jpg",
+      "images/p45-3.jpg",
+      "images/p45-4.jpg",
+      "images/p45-5.jpg",
+      "images/p45-6.jpg",
+      "images/p45-7.jpg",
+      "images/p45-8.jpg",
+      "images/p45-9.jpg"
+    ],
+    "labelImg": "images/p45-9.jpg"
+  },
+  {
+    "title": "カカオマーケット by マリベル サブレ・ヴィエノワニブ",
+    "desc": "",
+    "price": "日本售價 JP¥2,916（含稅）",
+    "qty": "3種",
+    "priceJPY": 2916,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p46-1.jpg",
+      "images/p46-2.jpg",
+      "images/p46-3.jpg",
+      "images/p46-4.jpg",
+      "images/p46-5.jpg",
+      "images/p46-6.jpg",
+      "images/p46-7.jpg",
+      "images/p46-8.jpg"
+    ],
+    "labelImg": "images/p46-8.jpg"
+  },
+  {
+    "title": "8・7 BAKE SHOP クッキー缶（大）",
+    "desc": "",
+    "price": "日本售價 JP¥3,240（含稅）",
+    "qty": "1 入",
+    "priceJPY": 3240,
+    "weight_g": 0,
+    "officialUrl": "https://www.bretonne-bis.com/",
+    "images": [
+      "images/p47-1.jpg",
+      "images/p47-2.jpg",
+      "images/p47-3.jpg",
+      "images/p47-4.jpg",
+      "images/p47-5.jpg",
+      "images/p47-6.jpg",
+      "images/p47-7.jpg",
+      "images/p47-8.jpg"
+    ],
+    "labelImg": "images/p47-8.jpg"
+  },
+  {
+    "title": "鎌倉ニュージャーマン かまくらボーロ",
+    "desc": "",
+    "price": "日本售價 JP¥1,296（含稅）",
+    "qty": "1 入",
+    "priceJPY": 1296,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p48-1.jpg",
+      "images/p48-2.jpg",
+      "images/p48-3.jpg",
+      "images/p48-4.jpg",
+      "images/p48-5.jpg",
+      "images/p48-6.jpg",
+      "images/p48-7.jpg",
+      "images/p48-8.jpg"
+    ],
+    "labelImg": "images/p48-8.jpg"
+  },
+  {
+    "title": "鎌倉ニュージャーマン 月鏡（レーズン）",
+    "desc": "",
+    "price": "日本售價 JP¥1,296（含稅）",
+    "qty": "5個入",
+    "priceJPY": 1296,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p49-1.jpg"
+    ],
+    "labelImg": "images/p49-1.jpg"
+  },
+  {
+    "title": "フルールドール",
+    "desc": "",
+    "price": "日本售價 JP¥2,700（含稅）",
+    "qty": "1 入",
+    "priceJPY": 2700,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p50-1.jpg",
+      "images/p50-2.jpg",
+      "images/p50-3.jpg",
+      "images/p50-4.jpg",
+      "images/p50-5.jpg",
+      "images/p50-6.jpg",
+      "images/p50-7.jpg",
+      "images/p50-8.jpg"
+    ],
+    "labelImg": "images/p50-8.jpg"
+  },
+  {
+    "title": "プレシャス8種",
+    "desc": "",
+    "price": "日本售價 JP¥972（含稅）",
+    "qty": "1 入",
+    "priceJPY": 972,
+    "weight_g": 0,
+    "officialUrl": "https://www.bretonne-bis.com/",
+    "images": [
+      "images/p51-1.jpg",
+      "images/p51-2.jpg",
+      "images/p51-3.jpg",
+      "images/p51-4.jpg",
+      "images/p51-5.jpg",
+      "images/p51-6.jpg",
+      "images/p51-7.jpg",
+      "images/p51-8.jpg"
+    ],
+    "labelImg": "images/p51-8.jpg"
+  },
+  {
+    "title": "ポルボローネ",
+    "desc": "",
+    "price": "日本售價 JP¥972（含稅）",
+    "qty": "13個入",
+    "priceJPY": 972,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p52-1.jpg",
+      "images/p52-2.jpg",
+      "images/p52-3.jpg",
+      "images/p52-4.jpg",
+      "images/p52-5.jpg",
+      "images/p52-6.jpg",
+      "images/p52-7.jpg",
+      "images/p52-8.jpg"
+    ],
+    "labelImg": "images/p52-8.jpg"
+  },
+  {
+    "title": "丸屋本店 Cookie Nature缶 M",
+    "desc": "",
+    "price": "日本售價 JP¥3,348（含稅）",
+    "qty": "41個入",
+    "priceJPY": 3348,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p53-1.jpg",
+      "images/p53-2.jpg",
+      "images/p53-3.jpg",
+      "images/p53-4.jpg"
+    ],
+    "labelImg": "images/p53-4.jpg"
+  },
+  {
+    "title": "JuKle （ジュクラ） くまさんクッキー缶",
+    "desc": "",
+    "price": "日本售價 JP¥3,240（含稅）",
+    "qty": "1 入",
+    "priceJPY": 3240,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p54-1.jpg",
+      "images/p54-2.jpg",
+      "images/p54-3.jpg",
+      "images/p54-4.jpg",
+      "images/p54-5.jpg",
+      "images/p54-6.jpg",
+      "images/p54-7.jpg",
+      "images/p54-8.jpg"
+    ],
+    "labelImg": "images/p54-8.jpg"
+  },
+  {
+    "title": "金谷クッキー",
+    "desc": "",
+    "price": "日本售價 JP¥1,620（含稅）",
+    "qty": "1 入",
+    "priceJPY": 1620,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p55-1.jpg",
+      "images/p55-2.jpg",
+      "images/p55-3.jpg",
+      "images/p55-4.jpg"
+    ],
+    "labelImg": "images/p55-4.jpg"
   }
 ]

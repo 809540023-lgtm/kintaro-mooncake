@@ -30,14 +30,18 @@ def num(stem):
 
 def prices(t):
     out = []
-    for m in re.finditer(r'(?:税込)?\s*¥\s*([0-9][0-9,]{2,6})', t or ''):
+    for m in re.finditer(r'(?:税込)?\s*[¥￥]\s*([0-9][0-9,]{2,6})', t or ''):
+        v = int(m.group(1).replace(',', ''))
+        if 300 <= v <= 20000:
+            out.append(v)
+    for m in re.finditer(r'(?:税込|本体価格)?\s*([0-9][0-9,]{2,6})\s*円', t or ''):
         v = int(m.group(1).replace(',', ''))
         if 300 <= v <= 20000:
             out.append(v)
     return out
 
 def tax_price(t):
-    m = re.search(r'税込\s*¥\s*([0-9][0-9,]{2,6})', t or '')
+    m = re.search(r'税込\s*[¥￥]?\s*([0-9][0-9,]{2,6})\s*(?:円)?', t or '')
     return int(m.group(1).replace(',', '')) if m else None
 
 def tag_score(t):
@@ -45,14 +49,16 @@ def tag_score(t):
         return 0
     s = 0
     if '特定原材料' in t: s += 2
-    if re.search(r'¥\s*[0-9][0-9,]{2,6}', t): s += 2
+    if re.search(r'[¥￥]\s*[0-9][0-9,]{2,6}', t): s += 2
+    if re.search(r'[0-9][0-9,]{2,6}\s*円', t): s += 2
     if '税込' in t: s += 1
+    if '本体価格' in t: s += 1
     if re.search(r'[0-9]+\s*(個入|枚入|本入|袋入|粒入)', t): s += 1
     if re.search(r'\b[A-Z]{1,3}[-‑][A-Z0-9]{2,6}', t): s += 1
     if '予約' in t: s += 1
     return s
 
-BAD = re.compile(r'特定原材料|税込|本体|¥|予約|限定|見本|配送|までに|しており|NEW|アレルギー|一部商品|焼き色|仕上がり|場合がござい|お渡し|ご試食|使用！|承ります|検索|価格|円（|円）')
+BAD = re.compile(r'特定原材料|税込|本体|¥|￥|予約|限定|見本|配送|までに|しており|NEW|アレルギー|一部商品|焼き色|仕上がり|場合がござい|お渡し|ご試食|使用！|承ります|検索|価格|円（|円）|おすすめ|スタッフ|マガジン|雑誌|カタログ')
 
 def name_lines(t):
     if not t:
@@ -68,6 +74,43 @@ def name_lines(t):
 def extract_qty(t):
     m = re.search(r'([0-9]+)\s*(個入|枚入|本入|袋入|粒入)', t or '')
     return f"{m.group(1)}{m.group(2)}" if m else ''
+
+LOC = re.compile(r'^[一-龥]{1,6}[・.]\s*[一-龥]{1,6}$')
+
+def locish(l):
+    if '・' in l and len(l) <= 9 and not re.search(r'[ァ-ヶA-Za-z]', l): return True
+    if re.match(r'^[一-龥]{1,6}(県|府|都|道)', l) and len(l) <= 12: return True
+    if re.search(r'\d+\s*(個入|枚入|本入|袋入|粒入|個|枚|袋|本)', l): return True
+    if re.match(r'^[A-Z]{1,3}[-‑][A-Z0-9]{2,6}$', l): return True
+    return False
+
+def pick_title_and_qty(t):
+    """型錄/雜誌頁面模式：由價格行往上找商品名與店名。"""
+    if not t: return '', ''
+    lines = [x.strip() for x in t.split('\n') if x.strip()]
+    pi = None
+    for i, l in enumerate(lines):
+        if re.search(r'[¥￥]\s*[0-9][0-9,]{2,6}', l) or re.search(r'[0-9][0-9,]{2,6}\s*円', l):
+            pi = i; break
+    if pi is None: return '', ''
+    ctx = lines[max(0, pi - 4):pi]
+    qty = ''
+    for l in ctx:
+        m = re.search(r'([0-9]+)\s*(個入|枚入|本入|袋入|粒入|個|枚|袋|本|粒)', l)
+        if m: qty = m.group(1) + m.group(2); break
+    prod, shop = '', ''
+    for l in reversed(ctx):
+        if not prod and re.search(r'[ァ-ヶA-Za-z]', l) and 3 <= len(l) <= 24 and not locish(l) and not BAD.search(l):
+            prod = l
+    for l in ctx:
+        m = re.match(r'^[＜<「](.+?)[＞>」]$', l)
+        if m and not locish(m.group(1)) and len(m.group(1)) <= 24:
+            shop = m.group(1); break
+        if ('工房' in l or '堂' in l or re.search(r'[A-Za-z]{4,}', l)) and l != prod and not locish(l) and not BAD.search(l) and len(l) <= 24:
+            shop = re.sub(r'^[一-龥]{1,4}[・.]\s*', '', l); break
+    title = (shop + ' ' + prod).strip() if (prod or shop) else ''
+    if len(title) > 40: title = prod
+    return title, qty
 
 def tokens(nl):
     toks = set()
@@ -136,8 +179,9 @@ def main():
         except Exception:
             dt = ''
         t = datetime.strptime(dt, '%Y:%m:%d %H:%M:%S') if dt.startswith('20') else datetime(2026, 1, 1)
-        recs.append({'stem': f.stem, 't': t, 'txt': data.get('txt', '')})
+        recs.append({'stem': f.stem, 't': t, 'txt': data.get('txt', ''), 'cj': str(CACHE / (key + '.jpg'))})
     recs.sort(key=lambda r: r['t'])
+    recs = [r for r in recs if r['stem'] not in set(fixes.get('excludes', []))]
 
     # 分組：價目標籤開新商品，同價格/同名稱/相鄰重拍標籤視為同一商品
     groups, cur = [], {'tag': None, 'prices': set(), 'photos': []}
@@ -220,10 +264,13 @@ def main():
                 if not priceJPY:
                     ok = [p for p in pl if p <= 15000]
                     priceJPY = max(ok) if ok else 0
-            nl = name_lines(tag['txt']) if tag else []
-            tb = [l for l in nl if re.search(r'[ァ-ヶ一-龥]', l) and not re.match(r'^[0-9]+個', l)][:1]
-            name = ' '.join(tb) if tb else ''
-            qty = extract_qty(tag['txt']) if tag else ''
+            name, qty = pick_title_and_qty(tag['txt']) if tag else ('', '')
+            if not name:
+                nl = name_lines(tag['txt']) if tag else []
+                tb = [l for l in nl if re.search(r'[ァ-ヶ一-龥]', l) and not re.match(r'^[0-9]+個', l)][:1]
+                name = ' '.join(tb) if tb else ''
+            if not qty and tag:
+                qty = extract_qty(tag['txt'])
             brand = brand_of(name, tag['txt'] if tag else '', brands)
         name = cleanup(name, fixes)
         if not name:
@@ -239,7 +286,10 @@ def main():
                 continue
             dst = imgdir / f'p{maxn:02d}-{k}.jpg'
             if not args.dry_run:
-                im = Image.open(srcf).convert('RGB')
+                try:
+                    im = Image.open(srcf).convert('RGB')
+                except Exception:
+                    im = Image.open(p['cj']).convert('RGB')
                 im.thumbnail((1200, 1200))
                 im.save(dst, quality=78)
             files_out.append(f'images/{dst.name}')

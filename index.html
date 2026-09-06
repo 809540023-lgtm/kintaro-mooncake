@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
 <title>林博 中秋甜品禮盒</title>
 <meta name="description" content="日本甜品中秋禮盒・日本直送代購">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -139,7 +139,9 @@
   .sumrow .twd{font-variant-numeric:tabular-nums}
   .cust h4{font-family:var(--serif);font-weight:700;font-size:1rem;margin:14px 0 4px;letter-spacing:.05em}
   .cust .note{font-size:.76rem;color:var(--muted);margin:0 0 10px}
+  .cust{background:var(--paper-2);border:1px dashed var(--line);border-radius:12px;padding:12px 14px 4px;margin-top:14px}
   .cust input{width:100%;height:38px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);padding:0 12px;margin-bottom:8px;font-family:var(--sans);font-size:.92rem}
+  .cust input.err{border-color:var(--aka);box-shadow:0 0 0 2px var(--aka-soft)}
   .linesupport{margin-top:12px;border:2px solid #06C755;border-radius:12px;padding:14px 16px;background:#F0FBF4}
   .linesupport .t{margin:0 0 6px;font-weight:800;font-size:.95rem;color:#06843f}
   .linesupport .d{margin:0 0 10px;font-size:.84rem;line-height:1.7;color:var(--muted)}
@@ -237,8 +239,8 @@
     </div>
     <div id="sumBox"></div>
     <div class="cust">
-      <h4>訂購資訊</h4>
-      <p class="note">熟客制：填妥後按「送出訂單」，會直接寄到店家 Email。</p>
+      <h4>📋 收件資訊（必填）</h4>
+      <p class="note">填妥姓名、電話、地址後按「送出訂單」，訂單會直接寄到店家信箱。</p>
       <input id="custName" placeholder="姓名" autocomplete="name">
       <input id="custPhone" placeholder="電話" autocomplete="tel">
       <input id="custAddr" placeholder="寄送地址" autocomplete="street-address">
@@ -355,24 +357,62 @@
     return L.join('\n');
   }
 
+  function markEmpty(){
+    var first=null;
+    ['custName','custPhone','custAddr'].forEach(function(id){
+      var el=document.getElementById(id);
+      var empty=!el.value.trim();
+      el.classList.toggle('err',empty);
+      if(empty&&!first)first=el;
+    });
+    if(first){
+      first.scrollIntoView({block:'center',behavior:'smooth'});
+      setTimeout(function(){try{first.focus({preventScroll:true});}catch(e){first.focus();}},380);
+    }
+    return first;
+  }
+  ['custName','custPhone','custAddr'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener('input',function(){el.classList.remove('err');});
+    el.addEventListener('focus',function(){setTimeout(function(){try{el.scrollIntoView({block:'center',behavior:'smooth'});}catch(e){}},380);});
+  });
+
+  function postJSON(url,body,opts){
+    opts=opts||{};
+    var ctl=(typeof AbortController!=='undefined')?new AbortController():null;
+    var t=ctl&&!opts.noTimeout?setTimeout(function(){ctl.abort();},12000):null;
+    return fetch(url,{method:'POST',headers:{'Content-Type':opts.plain?'text/plain;charset=utf-8':'application/json','Accept':'application/json'},body:JSON.stringify(body),signal:ctl?ctl.signal:undefined})
+      .then(function(r){return r.json();})
+      .finally(function(){if(t)clearTimeout(t);});
+  }
+
   document.getElementById('sendBtn').addEventListener('click',function(){
     var text=orderText();if(!text){msgEl.className='msg';msgEl.textContent='購物車是空的，請先選購。';return;}
     var name=document.getElementById('custName').value.trim(),phone=document.getElementById('custPhone').value.trim(),addr=document.getElementById('custAddr').value.trim();
-    if(!name||!phone||!addr){msgEl.className='msg';msgEl.textContent='請先填寫姓名、電話、地址。';return;}
+    if(!name||!phone||!addr){msgEl.className='msg';msgEl.textContent='請先填寫姓名、電話、地址（紅框欄位）。';markEmpty();return;}
     var btn=this;btn.disabled=true;msgEl.className='msg';msgEl.textContent='送出中…';
-    function okMsg(){msgEl.className='msg ok';msgEl.textContent='✓ 感謝您的預定！工作人員會盡快與您聯絡。（國際運費以實際估算為主）';cart={};saveCart();updateCart();}
-    if(window.KINTARO_ORDER_API){
-      fetch(window.KINTARO_ORDER_API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({_subject:'【林博】新訂單 - '+name,姓名:name,電話:phone,地址:addr,訂單明細:text})})
-      .then(function(r){return r.json();}).then(function(d){
-        if(d&&d.status==='ok'){okMsg();}
-        else{throw new Error('fail');}
-      }).catch(function(){msgEl.className='msg';msgEl.textContent='送出失敗，請改用下方「複製訂單明細」傳給我們。';}).finally(function(){btn.disabled=false;});
-    }else{
-      var mail='mailto:'+encodeURIComponent(window.KINTARO_ORDER_EMAIL)+'?subject='+encodeURIComponent('【林博】新訂單 - '+name)+'&body='+encodeURIComponent(text);
-      window.location.href=mail;
-      msgEl.className='msg ok';msgEl.textContent='✓ 已為您開啟郵件程式，按「傳送」即完成預定，工作人員會盡快聯絡您！（國際運費以實際估算為主）';
-      btn.disabled=false;
-    }
+    function okMsg(){msgEl.className='msg ok';msgEl.textContent='✓ 訂單已送出！感謝您的預定，工作人員會盡快與您聯絡。（國際運費以實際估算為主）';cart={};saveCart();updateCart();btn.disabled=false;}
+    var steps=[];
+    // 第一層：自有的 Google Apps Script（在 index.html 上方貼上網址即啟用）
+    if(window.KINTARO_ORDER_API)steps.push(function(ok,next){
+      postJSON(window.KINTARO_ORDER_API,{_subject:'【林博】新訂單 - '+name,姓名:name,電話:phone,地址:addr,text:text},{plain:true,noTimeout:true})
+      .then(function(d){if(d&&d.status==='ok')ok();else next();}).catch(next);
+    });
+    // 第二層：FormSubmit（店家信箱點過啟用信後即生效）
+    steps.push(function(ok,next){
+      postJSON('https://formsubmit.co/ajax/'+encodeURIComponent(window.KINTARO_ORDER_EMAIL),{_subject:'【林博】新訂單 - '+name,_captcha:'false',姓名:name,電話:phone,地址:addr,訂單明細:text})
+      .then(function(d){if(d&&(d.success==='true'||d.success===true))ok();else next();}).catch(next);
+    });
+    (function run(i){
+      if(i>=steps.length){
+        // 最後備援：開啟郵件程式（mailto）
+        var mail='mailto:'+encodeURIComponent(window.KINTARO_ORDER_EMAIL)+'?subject='+encodeURIComponent('【林博】新訂單 - '+name)+'&body='+encodeURIComponent(text);
+        window.location.href=mail;
+        msgEl.className='msg ok';msgEl.textContent='✓ 已為您開啟郵件程式，按「傳送」即完成預定，工作人員會盡快聯絡您！（國際運費以實際估算為主）';
+        btn.disabled=false;return;
+      }
+      steps[i](okMsg,function(){run(i+1);});
+    })(0);
   });
   document.getElementById('copyBtn').addEventListener('click',function(){
     var text=orderText();if(!text){msgEl.className='msg';msgEl.textContent='購物車是空的。';return;}

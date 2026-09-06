@@ -6,7 +6,10 @@
 
 - 純靜態網站（`index.html`），Render 以 Static Site 部署。
 - 商品資料放在 `products.json`，圖片放在 `images/`。
-- 訂單透過 [FormSubmit](https://formsubmit.co) 寄到店家信箱（在 `index.html` 最上方的 `KINTARO_ORDER_EMAIL` 設定）。
+- 訂單寄信三層備援（在 `index.html` 的 `KINTARO_ORDER_EMAIL` / `KINTARO_ORDER_API` 設定）：
+  1. **Google Apps Script**（`apps-script/order-mailer.gs`，最穩定）：把部署網址填入 `KINTARO_ORDER_API` 後，訂單直接用店家 Gmail 寄出，顧客不用開郵件 App。
+  2. **FormSubmit**：未填 `KINTARO_ORDER_API` 時自動改用 [FormSubmit](https://formsubmit.co) AJAX 寄到 `KINTARO_ORDER_EMAIL`，需先在店家信箱點一次啟用信。
+  3. **開郵件程式（mailto）**：前兩層都失敗時的最後備援。
 - 商品資料由背景自動化每小時從 Google 雲端相簿辨識後更新（更新 `products.json` 與 `images/` 後推到本 repo，Render 會自動重新部署）。
 
 ## 本機預覽
@@ -53,6 +56,7 @@ OCR 使用 macOS 內建 Vision（`tools/ocr.swift`，首次執行會自動編譯
 並直接開啟店家 LINE 官方帳號（`KINTARO_LINE_URL`，短連結 <https://lin.ee/xtBgE5B>），顧客貼上後送出即可估價。
 金額僅供參考，以最終報價為主。
 
-## 訂單信箱啟用
+## 訂單寄信啟用
 
-第一次有人送出訂單時，FormSubmit 會寄一封啟用信到店家信箱，點信中連結啟用一次後即可正常收單。
+- **FormSubmit**：第一次送出時 FormSubmit 會寄一封啟用信到店家信箱，點信中「Activate Form」連結啟用一次後即可正常收單（沒看到信請檢查垃圾郵件夾）。
+- **Google Apps Script（建議）**：照 `apps-script/order-mailer.gs` 檔案開頭的 8 個步驟部署，把網址填入 `index.html` 的 `KINTARO_ORDER_API`，之後訂單一律走自己的 Gmail，最穩定。
