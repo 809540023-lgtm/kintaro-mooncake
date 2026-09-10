@@ -90,6 +90,8 @@
   .addbtn{flex:1;height:38px;border:none;border-radius:10px;background:var(--aka);color:#fff;font-family:var(--serif);font-weight:700;font-size:.95rem;letter-spacing:.06em;cursor:pointer}
   .addbtn:hover{filter:brightness(1.06)}
   .addbtn.nostock{background:var(--muted);cursor:default}
+  .addbtn.askbtn{background:#06C755}
+  .addbtn.askbtn:hover{filter:brightness(1.05)}
   .card.empty{border-style:dashed;box-shadow:none;background:transparent}
   .card.empty .ph{display:flex;align-items:center;justify-content:center;background:var(--paper-2)}
   .card.empty .ph .sealwrap{width:64px;height:64px;opacity:.5}
@@ -308,7 +310,7 @@
       var meta=mp.length?'<div style="display:flex;gap:16px;align-items:baseline;flex-wrap:wrap">'+mp.join('')+'</div>':'';
       var desc=p.desc?'<div class="desc">'+esc(p.desc)+'</div>':'<div class="desc"></div>';
       var brand=p.officialUrl?'<a class="brand" href="'+esc(p.officialUrl)+'" target="_blank" rel="noopener">日本原廠官網 ↗</a>':'';
-      var buy=p.priceJPY>0?'<div class="buy"><div class="stepper"><button type="button" data-step="-1" data-idx="'+p.idx+'" aria-label="減少">−</button><input type="text" inputmode="numeric" value="1" data-qty="'+p.idx+'" aria-label="數量"><button type="button" data-step="1" data-idx="'+p.idx+'" aria-label="增加">＋</button></div><button class="addbtn" data-add="'+p.idx+'">加入購物車</button></div>':'<div class="buy"><button class="addbtn nostock" disabled>價格未辨識</button></div>';
+      var buy=p.priceJPY>0?'<div class="buy"><div class="stepper"><button type="button" data-step="-1" data-idx="'+p.idx+'" aria-label="減少">−</button><input type="text" inputmode="numeric" value="1" data-qty="'+p.idx+'" aria-label="數量"><button type="button" data-step="1" data-idx="'+p.idx+'" aria-label="增加">＋</button></div><button class="addbtn" data-add="'+p.idx+'">加入購物車</button></div>':'<div class="buy"><button class="addbtn askbtn" data-ask="'+p.idx+'">📱 LINE 詢價</button></div>';
       html+='<div class="card"><div class="ph"><img id="cover-'+p.idx+'" loading="lazy" alt="'+esc(p.title)+'" src="'+esc(p.images[0])+'">'+count+'</div><div class="body"><div class="title">'+esc(p.title)+'</div>'+brand+desc+meta+'</div>'+thumbs+buy+'</div>';
     });
     grid.innerHTML=html||'';
@@ -317,6 +319,8 @@
     grid.querySelectorAll('[data-step]').forEach(function(b){b.addEventListener('click',function(){var idx=b.getAttribute('data-idx');var inp=grid.querySelector('input[data-qty="'+idx+'"]');inp.value=Math.max(1,(parseInt(inp.value,10)||1)+parseInt(b.getAttribute('data-step'),10));});});
     grid.querySelectorAll('input[data-qty]').forEach(function(inp){inp.addEventListener('change',function(){var v=parseInt(inp.value,10);inp.value=(!v||v<1)?1:v;});});
     grid.querySelectorAll('[data-add]').forEach(function(b){b.addEventListener('click',function(){var idx=b.getAttribute('data-add');var inp=grid.querySelector('input[data-qty="'+idx+'"]');var v=Math.max(1,parseInt(inp.value,10)||1);cart[idx]=(cart[idx]||0)+v;saveCart();updateCart();openCart();});});
+    grid.querySelectorAll('[data-ask]').forEach(function(b){b.addEventListener('click',function(){var p=prod(b.getAttribute('data-ask'));if(!p)return;var t='想詢價：'+p.title+(p.qtyDesc?'（'+p.qtyDesc+'）':'');var orig=b.textContent;function done(){b.textContent='✓ 已複製品名！';setTimeout(function(){b.textContent=orig;},2200);window.open(window.KINTARO_LINE_URL,'_blank');}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fb(t);done();});}else{fb(t);done();}});});
   }
 
   function openCart(){mask.hidden=false;panel.hidden=false;requestAnimationFrame(function(){mask.classList.add('open');panel.classList.add('open');});}
@@ -327,7 +331,7 @@
   rateInput.addEventListener('input',function(){var v=parseFloat(rateInput.value);if(v>0){rate=v;try{localStorage.setItem('kintaro-rate',v);}catch(e){}updateCart();}});
   weightInput.addEventListener('input',function(){var v=parseFloat(weightInput.value);if(v>0){boxWeight=v;try{localStorage.setItem('kintaro-weight',v);}catch(e){}updateCart();}});
 
-  function calc(){var itemsJPY=0,totalW=0,keys=Object.keys(cart);keys.forEach(function(k){var p=prod(k);if(!p){delete cart[k];return;}itemsJPY+=p.priceJPY*cart[k];totalW+=(p.weight_g>0?p.weight_g:boxWeight)*cart[k];});return {itemsJPY:itemsJPY,totalW:totalW,shipJPY:totalW>0?shipJPY(totalW):0,keys:keys};}
+  function calc(){var itemsJPY=0,totalW=0,keys=Object.keys(cart);keys.forEach(function(k){var p=prod(k);if(!p){delete cart[k];return;}itemsJPY+=p.priceJPY*cart[k];totalW+=(p.weight_g>0?p.weight_g:boxWeight)*cart[k];});keys=keys.filter(function(k){return prod(k);});return {itemsJPY:itemsJPY,totalW:totalW,shipJPY:totalW>0?shipJPY(totalW):0,keys:keys};}
 
   function updateCart(){
     var c=calc();badge.textContent=totalCount();fab.hidden=totalCount()===0;
