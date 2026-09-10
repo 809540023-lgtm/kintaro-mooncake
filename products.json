@@ -23,28 +23,24 @@
     "images": [
       "images/p01-1.jpg",
       "images/p01-2.jpg",
-      "images/p01-3.jpg",
-      "images/p01-4.jpg",
-      "images/p01-5.jpg",
-      "images/p01-6.jpg"
+      "images/p01-5.jpg"
     ],
     "labelImg": "images/p01-6.jpg"
   },
   {
-    "title": "ディアマン・ショコラ",
-    "desc": "",
+    "title": "ブルターニュ クッキーアソルティ缶（47個入）",
+    "desc": "ブルターニュ発酵バターの焼きクッキー約9種をオリジナル缶に詰め合わせた手土産好適品。",
     "price": "日本售價 JP¥5,400（含稅）",
-    "qty": "1 入",
+    "qty": "47個入",
     "priceJPY": 5400,
     "weight_g": 0,
     "officialUrl": "https://www.bretonne-bis.com/",
     "images": [
       "images/p02-1.jpg",
-      "images/p02-2.jpg",
       "images/p02-3.jpg",
-      "images/p02-4.jpg"
+      "images/p01-4.jpg"
     ],
-    "labelImg": "images/p02-4.jpg"
+    "labelImg": "images/p02-2.jpg"
   },
   {
     "title": "プティ・フィナンシェアソルティ",
@@ -57,8 +53,7 @@
     "images": [
       "images/p03-1.jpg",
       "images/p03-2.jpg",
-      "images/p03-3.jpg",
-      "images/p03-4.jpg"
+      "images/p03-3.jpg"
     ],
     "labelImg": "images/p03-4.jpg"
   },
@@ -86,8 +81,7 @@
     "images": [
       "images/p05-1.jpg",
       "images/p05-2.jpg",
-      "images/p05-3.jpg",
-      "images/p05-4.jpg"
+      "images/p05-3.jpg"
     ],
     "labelImg": "images/p05-4.jpg"
   },
@@ -100,9 +94,7 @@
     "weight_g": 0,
     "officialUrl": "https://www.bretonne-bis.com/",
     "images": [
-      "images/p06-1.jpg",
-      "images/p06-2.jpg",
-      "images/p06-3.jpg"
+      "images/p06-1.jpg"
     ],
     "labelImg": "images/p06-3.jpg"
   },
@@ -120,8 +112,8 @@
     "labelImg": "images/p07-1.jpg"
   },
   {
-    "title": "ガレット・ブルトンヌ フランボワーズ",
-    "desc": "",
+    "title": "ハロウィンクッキー・ガトーアソルティ（7個入）",
+    "desc": "3種のクッキーと期間限定のかぼちゃマドレーヌなど、自慢の焼き菓子を詰め合わせたハロウィン限定セット。",
     "price": "日本售價 JP¥2,160（含稅）",
     "qty": "7個入",
     "priceJPY": 2160,
@@ -135,23 +127,17 @@
   {
     "title": "ラブハリエアソート",
     "desc": "",
-    "price": "日本售價 JP¥1,772（含稅）",
+    "price": "日本售價 JP¥5,500（含稅）",
     "qty": "1 入",
-    "priceJPY": 1772,
+    "priceJPY": 5500,
     "weight_g": 0,
     "officialUrl": "https://clubharie.jp/",
     "images": [
       "images/p09-1.jpg",
       "images/p09-2.jpg",
       "images/p09-3.jpg",
-      "images/p09-4.jpg",
-      "images/p09-5.jpg",
-      "images/p09-6.jpg",
-      "images/p09-7.jpg",
       "images/p09-8.jpg",
-      "images/p09-9.jpg",
-      "images/p09-10.jpg",
-      "images/p09-11.jpg"
+      "images/p09-10.jpg"
     ],
     "labelImg": "images/p09-11.jpg"
   },
@@ -166,8 +152,7 @@
     "images": [
       "images/p10-1.jpg",
       "images/p10-2.jpg",
-      "images/p10-3.jpg",
-      "images/p10-4.jpg"
+      "images/p10-3.jpg"
     ],
     "labelImg": "images/p10-4.jpg"
   },
@@ -180,8 +165,6 @@
     "weight_g": 85,
     "officialUrl": "https://www.sugarbuttertree.jp/",
     "images": [
-      "images/p11-1.jpg",
-      "images/p11-2.jpg",
       "images/p11-3.jpg"
     ],
     "labelImg": "images/p11-3.jpg"
@@ -196,8 +179,7 @@
     "officialUrl": "https://www.tuliprose.jp/",
     "images": [
       "images/p12-1.jpg",
-      "images/p12-2.jpg",
-      "images/p12-3.jpg"
+      "images/p12-2.jpg"
     ],
     "labelImg": "images/p12-3.jpg"
   },
@@ -212,13 +194,12 @@
     "images": [
       "images/p13-1.jpg",
       "images/p13-2.jpg",
-      "images/p13-3.jpg",
-      "images/p13-4.jpg"
+      "images/p13-3.jpg"
     ],
     "labelImg": "images/p13-4.jpg"
   },
   {
-    "title": "ラブハリエ めで鯛（別サイズ・要確認）",
+    "title": "ラブハリエ めで鯛（別サイズ）",
     "desc": "",
     "price": "日本售價 JP¥3,402（含稅）",
     "qty": "1 入",
@@ -226,8 +207,7 @@
     "weight_g": 0,
     "officialUrl": "https://clubharie.jp/",
     "images": [
-      "images/p14-1.jpg",
-      "images/p14-2.jpg"
+      "images/p14-1.jpg"
     ],
     "labelImg": "images/p14-2.jpg"
   },
@@ -242,8 +222,7 @@
     "images": [
       "images/p15-1.jpg",
       "images/p15-2.jpg",
-      "images/p15-3.jpg",
-      "images/p15-4.jpg"
+      "images/p15-3.jpg"
     ],
     "labelImg": "images/p15-4.jpg"
   },
@@ -259,11 +238,8 @@
       "images/p16-1.jpg",
       "images/p16-2.jpg",
       "images/p16-3.jpg",
-      "images/p16-4.jpg",
-      "images/p16-5.jpg",
       "images/p16-6.jpg",
-      "images/p16-7.jpg",
-      "images/p16-8.jpg"
+      "images/p16-7.jpg"
     ],
     "labelImg": "images/p16-8.jpg"
   },
@@ -278,13 +254,12 @@
     "images": [
       "images/p17-1.jpg",
       "images/p17-2.jpg",
-      "images/p17-3.jpg",
-      "images/p17-4.jpg"
+      "images/p17-3.jpg"
     ],
     "labelImg": "images/p17-4.jpg"
   },
   {
-    "title": "プロミネントアソート（40個入・要確認）",
+    "title": "プロミネントアソート（40個入）",
     "desc": "",
     "price": "日本售價 JP¥3,240（含稅）",
     "qty": "40個入",
@@ -294,16 +269,12 @@
     "images": [
       "images/p18-1.jpg",
       "images/p18-2.jpg",
-      "images/p18-3.jpg",
-      "images/p18-4.jpg",
-      "images/p18-5.jpg",
-      "images/p18-6.jpg",
-      "images/p18-7.jpg"
+      "images/p18-3.jpg"
     ],
     "labelImg": "images/p18-7.jpg"
   },
   {
-    "title": "岡山白桃ゼリー（スカット）",
+    "title": "スカットゼリー（岡山県産）",
     "desc": "",
     "price": "日本售價 JP¥648（含稅）",
     "qty": "1 入",
@@ -311,31 +282,20 @@
     "weight_g": 0,
     "officialUrl": "",
     "images": [
-      "images/p19-1.jpg",
-      "images/p19-2.jpg",
-      "images/p19-3.jpg",
-      "images/p19-4.jpg",
-      "images/p19-5.jpg",
-      "images/p19-6.jpg",
-      "images/p19-7.jpg",
-      "images/p19-8.jpg"
+      "images/p19-1.jpg"
     ],
     "labelImg": "images/p19-8.jpg"
   },
   {
     "title": "トリュフケーキ",
     "desc": "",
-    "price": "日本售價 JP¥2,160（含稅）",
+    "price": "（價格待確認）",
     "qty": "6個入",
-    "priceJPY": 2160,
+    "priceJPY": 0,
     "weight_g": 550,
     "officialUrl": "https://www.boulmich.co.jp/",
     "images": [
-      "images/p20-1.jpg",
-      "images/p20-2.jpg",
-      "images/p20-3.jpg",
-      "images/p20-4.jpg",
-      "images/p20-5.jpg"
+      "images/p20-1.jpg"
     ],
     "labelImg": "images/p20-5.jpg"
   },
@@ -343,58 +303,43 @@
     "title": "テーデベック（缶入り）",
     "desc": "",
     "price": "日本售價 JP¥3,240（含稅）",
-    "qty": "1 入",
+    "qty": "17種・缶入り",
     "priceJPY": 3240,
     "weight_g": 0,
     "officialUrl": "",
     "images": [
       "images/p21-1.jpg",
-      "images/p21-2.jpg",
-      "images/p21-3.jpg",
-      "images/p21-4.jpg",
-      "images/p21-5.jpg",
-      "images/p21-6.jpg",
-      "images/p21-7.jpg",
-      "images/p21-8.jpg",
-      "images/p21-9.jpg",
-      "images/p21-10.jpg"
+      "images/p21-2.jpg"
     ],
     "labelImg": "images/p21-10.jpg"
   },
   {
-    "title": "「田の柿の種」プレミアム",
-    "desc": "",
-    "price": "（價格待確認）",
+    "title": "「亀田の柿の種」プレミアム（小）アソートボックス",
+    "desc": "柿の種とナッツのミックス5種類を詰め合わせたアソート（7.5g×各4袋×5種類）。",
+    "price": "日本售價 JP¥1,944（含稅）",
     "qty": "20袋入",
-    "priceJPY": 0,
+    "priceJPY": 1944,
     "weight_g": 0,
     "officialUrl": "https://www.kamedaseika.co.jp/",
     "images": [
       "images/p22-1.jpg",
       "images/p22-2.jpg",
-      "images/p22-3.jpg"
+      "images/p21-6.jpg"
     ],
     "labelImg": "images/p22-3.jpg"
   },
   {
-    "title": "（待確認）柿の種系列",
-    "desc": "",
-    "price": "（價格待確認）",
-    "qty": "20袋入",
-    "priceJPY": 0,
+    "title": "「亀田の柿の種」プレミアム（大）アソートボックス",
+    "desc": "柿の種とナッツのミックス5種類を詰め合わせた大容量アソート。",
+    "price": "日本售價 JP¥3,888（含稅）",
+    "qty": "40袋入",
+    "priceJPY": 3888,
     "weight_g": 0,
     "officialUrl": "https://www.kamedaseika.co.jp/",
     "images": [
-      "images/p23-1.jpg",
-      "images/p23-2.jpg",
-      "images/p23-3.jpg",
-      "images/p23-4.jpg",
-      "images/p23-5.jpg",
-      "images/p23-6.jpg",
-      "images/p23-7.jpg",
-      "images/p23-8.jpg"
+      "images/p23-1.jpg"
     ],
-    "labelImg": "images/p23-8.jpg"
+    "labelImg": "images/p23-1.jpg"
   },
   {
     "title": "摘みたて菓実（完熟ぶどう）",
@@ -405,48 +350,41 @@
     "weight_g": 0,
     "officialUrl": "https://www.kamedaseika.co.jp/",
     "images": [
-      "images/p24-1.jpg",
-      "images/p24-2.jpg",
-      "images/p24-3.jpg",
       "images/p24-4.jpg",
-      "images/p24-5.jpg",
       "images/p24-6.jpg",
-      "images/p24-7.jpg",
-      "images/p24-8.jpg"
+      "images/p24-7.jpg"
     ],
-    "labelImg": "images/p24-8.jpg"
+    "labelImg": "images/p24-5.jpg"
   },
   {
-    "title": "ハッピーポップ",
+    "title": "ハッピーポップ（アソートタイプ）",
     "desc": "",
-    "price": "（價格待確認）",
-    "qty": "6個入",
-    "priceJPY": 0,
+    "price": "日本售價 JP¥2,160（含稅）",
+    "qty": "28個入",
+    "priceJPY": 2160,
     "weight_g": 0,
     "officialUrl": "",
     "images": [
       "images/p25-1.jpg",
       "images/p25-2.jpg",
       "images/p25-3.jpg",
-      "images/p25-4.jpg"
+      "images/p26-4.jpg",
+      "images/p26-5.jpg"
     ],
     "labelImg": "images/p25-4.jpg"
   },
   {
-    "title": "スイートコーン菓子（要確認）",
+    "title": "スイートコーン（クリスピータイプ）",
     "desc": "",
-    "price": "日本售價 JP¥2,864（含稅）",
+    "price": "日本售價 JP¥864（含稅）",
     "qty": "10個入",
-    "priceJPY": 2864,
+    "priceJPY": 864,
     "weight_g": 0,
     "officialUrl": "",
     "images": [
       "images/p26-1.jpg",
       "images/p26-2.jpg",
-      "images/p26-3.jpg",
-      "images/p26-4.jpg",
-      "images/p26-5.jpg",
-      "images/p26-6.jpg"
+      "images/p26-3.jpg"
     ],
     "labelImg": "images/p26-6.jpg"
   },
@@ -454,18 +392,14 @@
     "title": "ベイクフルデー",
     "desc": "",
     "price": "日本售價 JP¥2,160（含稅）",
-    "qty": "1 入",
+    "qty": "9種入",
     "priceJPY": 2160,
     "weight_g": 0,
     "officialUrl": "https://www.boulmich.co.jp/",
     "images": [
       "images/p27-1.jpg",
       "images/p27-2.jpg",
-      "images/p27-3.jpg",
-      "images/p27-4.jpg",
-      "images/p27-5.jpg",
-      "images/p27-6.jpg",
-      "images/p27-7.jpg"
+      "images/p27-6.jpg"
     ],
     "labelImg": "images/p27-7.jpg"
   },
@@ -481,120 +415,98 @@
       "images/p28-1.jpg",
       "images/p28-2.jpg",
       "images/p28-3.jpg",
-      "images/p28-4.jpg",
-      "images/p28-5.jpg",
-      "images/p28-6.jpg",
-      "images/p28-7.jpg"
+      "images/p28-5.jpg"
     ],
     "labelImg": "images/p28-7.jpg"
   },
   {
     "title": "お米の最中クッキー（宇治抹茶）",
     "desc": "",
-    "price": "（價格待確認）",
+    "price": "日本售價 JP¥1,404（含稅）",
     "qty": "10個入",
-    "priceJPY": 0,
+    "priceJPY": 1404,
     "weight_g": 0,
     "officialUrl": "https://www.patisserie-gokan.co.jp/",
     "images": [
-      "images/p29-1.jpg",
-      "images/p29-2.jpg",
-      "images/p29-3.jpg",
-      "images/p29-4.jpg"
+      "images/p28-4.jpg",
+      "images/p29-1.jpg"
     ],
     "labelImg": "images/p29-4.jpg"
   },
   {
     "title": "お米のパウムクーヘン五感重巻【紅玉林檎】",
     "desc": "",
-    "price": "日本售價 JP¥2,160（含稅）",
+    "price": "日本售價 JP¥1,512（含稅）",
     "qty": "1 入",
-    "priceJPY": 2160,
+    "priceJPY": 1512,
     "weight_g": 0,
     "officialUrl": "https://www.patisserie-gokan.co.jp/",
     "images": [
       "images/p30-1.jpg",
       "images/p30-2.jpg",
       "images/p30-3.jpg",
-      "images/p30-4.jpg",
-      "images/p30-5.jpg",
-      "images/p30-6.jpg"
+      "images/p30-5.jpg"
     ],
     "labelImg": "images/p30-6.jpg"
   },
   {
     "title": "THEせんべい（たこやき味）",
     "desc": "",
-    "price": "（價格待確認）",
+    "price": "日本售價 JP¥540（含稅）",
     "qty": "6袋入",
-    "priceJPY": 0,
+    "priceJPY": 540,
     "weight_g": 0,
     "officialUrl": "https://www.kamedaseika.co.jp/",
     "images": [
       "images/p32-1.jpg",
       "images/p32-2.jpg",
-      "images/p32-3.jpg",
       "images/p31-1.jpg"
     ],
     "labelImg": "images/p32-3.jpg"
   },
   {
-    "title": "THEせんべい（だし醤油・要確認）",
+    "title": "THEせんべい（だし醤油味）",
     "desc": "",
-    "price": "（價格待確認）",
+    "price": "日本售價 JP¥540（含稅）",
     "qty": "6袋入",
-    "priceJPY": 0,
+    "priceJPY": 540,
     "weight_g": 0,
     "officialUrl": "https://www.kamedaseika.co.jp/",
     "images": [
       "images/p33-1.jpg",
       "images/p33-2.jpg",
-      "images/p33-3.jpg",
-      "images/p33-4.jpg",
-      "images/p33-5.jpg",
-      "images/p33-6.jpg",
-      "images/p33-7.jpg",
-      "images/p33-8.jpg"
+      "images/p33-3.jpg"
     ],
     "labelImg": "images/p33-8.jpg"
   },
   {
-    "title": "THEせんべい（国産うるち米）",
+    "title": "THEせんべい（えびマヨ味）",
     "desc": "",
-    "price": "（價格待確認）",
+    "price": "日本售價 JP¥540（含稅）",
     "qty": "6袋入",
-    "priceJPY": 0,
+    "priceJPY": 540,
     "weight_g": 0,
     "officialUrl": "https://www.kamedaseika.co.jp/",
     "images": [
       "images/p34-1.jpg",
       "images/p34-2.jpg",
-      "images/p34-3.jpg",
-      "images/p34-4.jpg",
-      "images/p34-5.jpg",
-      "images/p34-6.jpg",
-      "images/p34-7.jpg",
-      "images/p34-8.jpg"
+      "images/p34-3.jpg"
     ],
     "labelImg": "images/p34-8.jpg"
   },
   {
-    "title": "THEせんべい（スパイシー大人味）",
+    "title": "THEせんべい（塩キャラメル味）",
     "desc": "",
-    "price": "（價格待確認）",
+    "price": "日本售價 JP¥540（含稅）",
     "qty": "6袋入",
-    "priceJPY": 0,
+    "priceJPY": 540,
     "weight_g": 0,
     "officialUrl": "https://www.kamedaseika.co.jp/",
     "images": [
       "images/p35-1.jpg",
       "images/p35-2.jpg",
       "images/p35-3.jpg",
-      "images/p35-4.jpg",
-      "images/p35-5.jpg",
-      "images/p35-6.jpg",
-      "images/p35-7.jpg",
-      "images/p35-8.jpg"
+      "images/p34-7.jpg"
     ],
     "labelImg": "images/p35-8.jpg"
   },
@@ -611,8 +523,7 @@
       "images/p36-2.jpg",
       "images/p36-3.jpg",
       "images/p36-4.jpg",
-      "images/p36-5.jpg",
-      "images/p36-6.jpg"
+      "images/p36-5.jpg"
     ],
     "labelImg": "images/p36-6.jpg"
   },
@@ -628,108 +539,95 @@
       "images/p37-1.jpg",
       "images/p37-2.jpg",
       "images/p37-3.jpg",
-      "images/p37-4.jpg",
-      "images/p37-5.jpg"
+      "images/p37-4.jpg"
     ],
     "labelImg": "images/p37-5.jpg"
   },
   {
-    "title": "海老づくし（国産車えび）",
+    "title": "海老づくし（2カップと・20袋入）",
     "desc": "",
-    "price": "（價格待確認）",
-    "qty": "1 入",
-    "priceJPY": 0,
+    "price": "日本售價 JP¥5,400（含稅）",
+    "qty": "20袋入",
+    "priceJPY": 5400,
     "weight_g": 0,
     "officialUrl": "https://www.keishindo-shop.com/",
     "images": [
       "images/p38-1.jpg",
       "images/p38-2.jpg",
       "images/p38-3.jpg",
-      "images/p38-4.jpg",
       "images/p38-5.jpg",
-      "images/p38-6.jpg",
-      "images/p38-7.jpg",
-      "images/p38-8.jpg"
+      "images/p38-7.jpg"
     ],
     "labelImg": "images/p38-8.jpg"
   },
   {
-    "title": "海老づくし（別サイズ）",
+    "title": "海老づくし（2カップと・11袋入）",
     "desc": "",
-    "price": "（價格待確認）",
+    "price": "日本售價 JP¥4,320（含稅）",
     "qty": "11袋入",
-    "priceJPY": 0,
+    "priceJPY": 4320,
     "weight_g": 0,
     "officialUrl": "https://www.keishindo-shop.com/",
     "images": [
       "images/p39-1.jpg",
-      "images/p39-2.jpg",
-      "images/p39-3.jpg",
-      "images/p39-4.jpg"
+      "images/p39-3.jpg"
     ],
     "labelImg": "images/p39-4.jpg"
   },
   {
-    "title": "花咲かりん（小かご・要確認）",
+    "title": "花咲かりん（小かご）",
     "desc": "",
-    "price": "（價格待確認）",
+    "price": "日本售價 JP¥1,970（含稅）",
     "qty": "1 入",
-    "priceJPY": 0,
+    "priceJPY": 1970,
     "weight_g": 0,
     "officialUrl": "",
     "images": [
-      "images/p40-1.jpg",
-      "images/p40-2.jpg"
+      "images/p40-1.jpg"
     ],
     "labelImg": "images/p40-2.jpg"
   },
   {
-    "title": "（待確認）プレーン燒菓子",
-    "desc": "",
-    "price": "（價格待確認）",
-    "qty": "1 入",
-    "priceJPY": 0,
+    "title": "花咲かりん 焼菓子（プレーン）",
+    "desc": "花咲かりんの焼菓子単品（プレーン・トマト・ほうれん草など1個から購入可）。",
+    "price": "日本售價 JP¥201（含稅）",
+    "qty": "1個",
+    "priceJPY": 201,
     "weight_g": 0,
     "officialUrl": "",
     "images": [
-      "images/p41-1.jpg",
       "images/p41-2.jpg"
     ],
     "labelImg": "images/p41-2.jpg"
   },
   {
-    "title": "（待確認）商品",
+    "title": "花咲かりん（帯付き化粧箱）",
     "desc": "",
-    "price": "（價格待確認）",
-    "qty": "1 入",
-    "priceJPY": 0,
+    "price": "日本售價 JP¥1,361（含稅）",
+    "qty": "1箱",
+    "priceJPY": 1361,
     "weight_g": 0,
     "officialUrl": "",
     "images": [
       "images/p42-1.jpg",
       "images/p42-2.jpg",
-      "images/p42-3.jpg",
-      "images/p42-4.jpg",
-      "images/p42-5.jpg",
-      "images/p42-6.jpg",
-      "images/p42-7.jpg"
+      "images/p42-3.jpg"
     ],
     "labelImg": "images/p42-7.jpg"
   },
   {
-    "title": "メープルチョコプール（要確認）",
+    "title": "メープルチョコプール（阪急うめだ本店限定）",
     "desc": "",
-    "price": "（價格待確認）",
+    "price": "日本售價 JP¥1,944（含稅）",
     "qty": "6個入",
-    "priceJPY": 0,
+    "priceJPY": 1944,
     "weight_g": 0,
     "officialUrl": "",
     "images": [
       "images/p43-1.jpg",
       "images/p43-2.jpg",
       "images/p43-3.jpg",
-      "images/p43-4.jpg",
-      "images/p43-5.jpg"
+      "images/p43-4.jpg"
     ],
     "labelImg": "images/p43-5.jpg"
   },
@@ -744,8 +642,7 @@
     "images": [
       "images/p44-1.jpg",
       "images/p44-2.jpg",
-      "images/p44-3.jpg",
-      "images/p44-4.jpg"
+      "images/p44-3.jpg"
     ],
     "labelImg": "images/p44-4.jpg"
   },
@@ -753,20 +650,13 @@
     "title": "koe dounuts クッキー缶",
     "desc": "",
     "price": "日本售價 JP¥2,281（含稅）",
-    "qty": "12枚",
+    "qty": "24枚（デコ12＋プレーン12）",
     "priceJPY": 2281,
     "weight_g": 0,
     "officialUrl": "",
     "images": [
       "images/p45-1.jpg",
-      "images/p45-2.jpg",
-      "images/p45-3.jpg",
-      "images/p45-4.jpg",
-      "images/p45-5.jpg",
-      "images/p45-6.jpg",
-      "images/p45-7.jpg",
-      "images/p45-8.jpg",
-      "images/p45-9.jpg"
+      "images/p45-2.jpg"
     ],
     "labelImg": "images/p45-9.jpg"
   },
@@ -780,13 +670,8 @@
     "officialUrl": "",
     "images": [
       "images/p46-1.jpg",
-      "images/p46-2.jpg",
-      "images/p46-3.jpg",
-      "images/p46-4.jpg",
-      "images/p46-5.jpg",
-      "images/p46-6.jpg",
-      "images/p46-7.jpg",
-      "images/p46-8.jpg"
+      "images/p45-7.jpg",
+      "images/p45-8.jpg"
     ],
     "labelImg": "images/p46-8.jpg"
   },
@@ -799,14 +684,8 @@
     "weight_g": 0,
     "officialUrl": "https://www.bretonne-bis.com/",
     "images": [
-      "images/p47-1.jpg",
-      "images/p47-2.jpg",
-      "images/p47-3.jpg",
-      "images/p47-4.jpg",
-      "images/p47-5.jpg",
-      "images/p47-6.jpg",
-      "images/p47-7.jpg",
-      "images/p47-8.jpg"
+      "images/p46-6.jpg",
+      "images/p46-7.jpg"
     ],
     "labelImg": "images/p47-8.jpg"
   },
@@ -814,19 +693,14 @@
     "title": "鎌倉ニュージャーマン かまくらボーロ",
     "desc": "",
     "price": "日本售價 JP¥1,296（含稅）",
-    "qty": "1 入",
+    "qty": "10個入",
     "priceJPY": 1296,
     "weight_g": 0,
     "officialUrl": "",
     "images": [
-      "images/p48-1.jpg",
-      "images/p48-2.jpg",
-      "images/p48-3.jpg",
-      "images/p48-4.jpg",
-      "images/p48-5.jpg",
-      "images/p48-6.jpg",
-      "images/p48-7.jpg",
-      "images/p48-8.jpg"
+      "images/p47-5.jpg",
+      "images/p47-6.jpg",
+      "images/p47-7.jpg"
     ],
     "labelImg": "images/p48-8.jpg"
   },
@@ -839,47 +713,39 @@
     "weight_g": 0,
     "officialUrl": "",
     "images": [
-      "images/p49-1.jpg"
+      "images/p48-6.jpg",
+      "images/p48-5.jpg",
+      "images/p48-7.jpg"
     ],
     "labelImg": "images/p49-1.jpg"
   },
   {
     "title": "フルールドール",
     "desc": "",
-    "price": "日本售價 JP¥2,700（含稅）",
+    "price": "日本售價 JP¥3,240（含稅）",
     "qty": "1 入",
-    "priceJPY": 2700,
+    "priceJPY": 3240,
     "weight_g": 0,
     "officialUrl": "",
     "images": [
       "images/p50-1.jpg",
       "images/p50-2.jpg",
-      "images/p50-3.jpg",
-      "images/p50-4.jpg",
-      "images/p50-5.jpg",
-      "images/p50-6.jpg",
-      "images/p50-7.jpg",
-      "images/p50-8.jpg"
+      "images/p50-3.jpg"
     ],
     "labelImg": "images/p50-8.jpg"
   },
   {
     "title": "プレシャス8種",
     "desc": "",
-    "price": "日本售價 JP¥972（含稅）",
+    "price": "日本售價 JP¥2,700（含稅）",
     "qty": "1 入",
-    "priceJPY": 972,
+    "priceJPY": 2700,
     "weight_g": 0,
     "officialUrl": "https://www.bretonne-bis.com/",
     "images": [
       "images/p51-1.jpg",
       "images/p51-2.jpg",
-      "images/p51-3.jpg",
-      "images/p51-4.jpg",
-      "images/p51-5.jpg",
-      "images/p51-6.jpg",
-      "images/p51-7.jpg",
-      "images/p51-8.jpg"
+      "images/p51-3.jpg"
     ],
     "labelImg": "images/p51-8.jpg"
   },
@@ -895,11 +761,7 @@
       "images/p52-1.jpg",
       "images/p52-2.jpg",
       "images/p52-3.jpg",
-      "images/p52-4.jpg",
-      "images/p52-5.jpg",
-      "images/p52-6.jpg",
-      "images/p52-7.jpg",
-      "images/p52-8.jpg"
+      "images/p52-7.jpg"
     ],
     "labelImg": "images/p52-8.jpg"
   },
@@ -914,8 +776,7 @@
     "images": [
       "images/p53-1.jpg",
       "images/p53-2.jpg",
-      "images/p53-3.jpg",
-      "images/p53-4.jpg"
+      "images/p53-3.jpg"
     ],
     "labelImg": "images/p53-4.jpg"
   },
@@ -931,11 +792,7 @@
       "images/p54-1.jpg",
       "images/p54-2.jpg",
       "images/p54-3.jpg",
-      "images/p54-4.jpg",
-      "images/p54-5.jpg",
-      "images/p54-6.jpg",
-      "images/p54-7.jpg",
-      "images/p54-8.jpg"
+      "images/p54-7.jpg"
     ],
     "labelImg": "images/p54-8.jpg"
   },
@@ -950,9 +807,449 @@
     "images": [
       "images/p55-1.jpg",
       "images/p55-2.jpg",
-      "images/p55-3.jpg",
-      "images/p55-4.jpg"
+      "images/p55-3.jpg"
     ],
     "labelImg": "images/p55-4.jpg"
+  },
+  {
+    "title": "ラブハリエ カゼ・ベッケライ（うめだ阪急店限定）",
+    "desc": "うめだ阪急店限定のチーズ風味焼き菓子。火曜日納品なし・お一人様2箱まで。",
+    "price": "日本售價 JP¥4,320（含稅）",
+    "qty": "1入",
+    "priceJPY": 4320,
+    "weight_g": 0,
+    "officialUrl": "https://clubharie.jp/",
+    "images": [
+      "images/p09-4.jpg",
+      "images/p09-5.jpg",
+      "images/p09-6.jpg",
+      "images/p09-7.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "ラブハリエ アソート（小）",
+    "desc": "クラブハリエ定番アソートの小サイズ。",
+    "price": "日本售價 JP¥1,772（含稅）",
+    "qty": "1入",
+    "priceJPY": 1772,
+    "weight_g": 0,
+    "officialUrl": "https://clubharie.jp/",
+    "images": [
+      "images/p09-9.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "たっぷりショコラサンド",
+    "desc": "シュガーバターツリーのたっぷりショコラサンド10個入。",
+    "price": "日本售價 JP¥1,350（含稅）",
+    "qty": "10個入",
+    "priceJPY": 1350,
+    "weight_g": 0,
+    "officialUrl": "https://www.sugarbuttertree.jp/",
+    "images": [
+      "images/p11-1.jpg",
+      "images/p11-2.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "リーフパイ ミニアソート缶（プレーン／チョコ）",
+    "desc": "クラブハリエ うめだ阪急店限定のリーフパイミニアソート缶。",
+    "price": "日本售價 JP¥1,728（含稅）",
+    "qty": "1缶",
+    "priceJPY": 1728,
+    "weight_g": 0,
+    "officialUrl": "https://clubharie.jp/",
+    "images": [
+      "images/p16-4.jpg",
+      "images/p16-5.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "マロングラッセ 12個入",
+    "desc": "ゴンチャロフ マロングラッセ12個入（化粧箱）。",
+    "price": "日本售價 JP¥3,240（含稅）",
+    "qty": "12個入",
+    "priceJPY": 3240,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p18-4.jpg",
+      "images/p18-5.jpg",
+      "images/p18-6.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "グランリュクス 詰合せ",
+    "desc": "BOUL' MICH「グランリュクス」焼菓子詰合せ（6・8・12・16・21・22・26・35個入等多種尺寸）。金額依尺寸而異，歡迎LINE詢價。",
+    "price": "（價格待確認）",
+    "qty": "1入",
+    "priceJPY": 0,
+    "weight_g": 0,
+    "officialUrl": "https://www.boulmich.co.jp/",
+    "images": [
+      "images/p19-2.jpg",
+      "images/p19-3.jpg",
+      "images/p19-4.jpg",
+      "images/p19-5.jpg",
+      "images/p19-6.jpg",
+      "images/p19-7.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "テーデベック（8種・缶入り）",
+    "desc": "BOUL' MICH テーデベック8種缶入り。",
+    "price": "日本售價 JP¥2,160（含稅）",
+    "qty": "1缶",
+    "priceJPY": 2160,
+    "weight_g": 0,
+    "officialUrl": "https://www.boulmich.co.jp/",
+    "images": [
+      "images/p20-2.jpg",
+      "images/p20-3.jpg",
+      "images/p20-4.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "タネビッツ 阪急うめだ本店限定（関西だし／お好み焼き）",
+    "desc": "阪急うめだ本店限定「タネビッツ」関西だし・お好み焼き味（11g×5袋入）。",
+    "price": "日本售價 JP¥864（含稅）",
+    "qty": "5袋入",
+    "priceJPY": 864,
+    "weight_g": 0,
+    "officialUrl": "https://www.kamedaseika.co.jp/",
+    "images": [
+      "images/p21-3.jpg",
+      "images/p21-4.jpg",
+      "images/p21-5.jpg",
+      "images/p21-7.jpg",
+      "images/p21-8.jpg",
+      "images/p21-9.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "「亀田の柿の種」プレミアム 単品フレーバー（5袋入）",
+    "desc": "亀田製菓プレミアム柿の種單一口味箱（チーズ醤油・天ぷら青のり・ローストアーモンド等、11g×5袋入）。",
+    "price": "日本售價 JP¥692（含稅）",
+    "qty": "5袋入",
+    "priceJPY": 692,
+    "weight_g": 0,
+    "officialUrl": "https://www.kamedaseika.co.jp/",
+    "images": [
+      "images/p23-2.jpg",
+      "images/p23-3.jpg",
+      "images/p23-5.jpg",
+      "images/p23-6.jpg",
+      "images/p23-7.jpg",
+      "images/p24-1.jpg",
+      "images/p24-2.jpg",
+      "images/p24-3.jpg",
+      "images/p24-8.jpg"
+    ],
+    "labelImg": "images/p23-4.jpg"
+  },
+  {
+    "title": "「五感」和のサブレ缶",
+    "desc": "パティスリー ゴカン 阪急限定の和のサブレ缶（国産素材・五穀・和三盆・黒糖・宇治抹茶）。",
+    "price": "日本售價 JP¥2,484（含稅）",
+    "qty": "1缶",
+    "priceJPY": 2484,
+    "weight_g": 0,
+    "officialUrl": "https://www.patisserie-gokan.co.jp/",
+    "images": [
+      "images/p27-3.jpg",
+      "images/p27-4.jpg",
+      "images/p27-5.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "お米の最中クッキー 穂の一／詰合せ",
+    "desc": "ほのいち お米の最中クッキー「穂の一」詰合せ20個入。",
+    "price": "日本售價 JP¥3,024（含稅）",
+    "qty": "20個入",
+    "priceJPY": 3024,
+    "weight_g": 0,
+    "officialUrl": "https://www.patisserie-gokan.co.jp/",
+    "images": [
+      "images/p29-2.jpg",
+      "images/p29-3.jpg",
+      "images/p28-6.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "ねんりん家 ひとくちバーム詰合せ",
+    "desc": "ねんりん家 ひとくちバーム詰合せ（4種6個入・秋限定）。",
+    "price": "日本售價 JP¥2,160（含稅）",
+    "qty": "6個入",
+    "priceJPY": 2160,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p30-4.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "海老づくし（2カップと・6袋入）",
+    "desc": "海老づくし 2カップと6袋入。",
+    "price": "日本售價 JP¥3,240（含稅）",
+    "qty": "6袋入",
+    "priceJPY": 3240,
+    "weight_g": 0,
+    "officialUrl": "https://www.keishindo-shop.com/",
+    "images": [
+      "images/p38-4.jpg",
+      "images/p38-6.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "海老づくし（4カップと）",
+    "desc": "海老づくし 4カップと。",
+    "price": "日本售價 JP¥6,480（含稅）",
+    "qty": "1入",
+    "priceJPY": 6480,
+    "weight_g": 0,
+    "officialUrl": "https://www.keishindo-shop.com/",
+    "images": [
+      "images/p39-2.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "花咲かりん・塩かりん（和かご詰合せ）",
+    "desc": "花咲かりん＋塩かりん的和風かご詰合せ。",
+    "price": "日本售價 JP¥3,121（含稅）",
+    "qty": "1入",
+    "priceJPY": 3121,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p41-1.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "ザ・メープルマニア（期間限定出店）",
+    "desc": "メープルバームクーヘン・メープルバタークッキー等（期間限定出店、時間帯限定販売）。金額歡迎LINE詢價。",
+    "price": "（價格待確認）",
+    "qty": "1入",
+    "priceJPY": 0,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p42-4.jpg",
+      "images/p42-5.jpg",
+      "images/p42-6.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "ガトージュジュ ドゥジェムクッキー缶",
+    "desc": "芦屋 ガトージュジュ ドゥジェムクッキー缶（7種・150g・限定品）。",
+    "price": "日本售價 JP¥3,024（含稅）",
+    "qty": "7種・150g",
+    "priceJPY": 3024,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p45-3.jpg",
+      "images/p45-4.jpg",
+      "images/p45-5.jpg",
+      "images/p45-6.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "COBATO ヴィレッジ缶（クマの缶）",
+    "desc": "大阪・天満橋 COBATO ヴィレッジ缶（クマの缶・シナモンナッツビスコッティ・限定品）。",
+    "price": "日本售價 JP¥1,836（含稅）",
+    "qty": "1缶",
+    "priceJPY": 1836,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p46-2.jpg",
+      "images/p46-3.jpg",
+      "images/p46-4.jpg",
+      "images/p46-5.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "BUNDY BAKE コーヒーのともだち クッキー缶",
+    "desc": "西宮 BUNDY BAKE「コーヒーのともだち」クッキー缶38個入。",
+    "price": "日本售價 JP¥3,240（含稅）",
+    "qty": "38個入",
+    "priceJPY": 3240,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p47-1.jpg",
+      "images/p47-2.jpg",
+      "images/p47-3.jpg",
+      "images/p47-4.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "月鏡（クルミ）",
+    "desc": "鎌倉ニュージャーマン 月鏡（クルミ）5個入。",
+    "price": "日本售價 JP¥1,296（含稅）",
+    "qty": "5個入",
+    "priceJPY": 1296,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p48-1.jpg",
+      "images/p48-2.jpg",
+      "images/p48-3.jpg",
+      "images/p48-4.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "泉屋東京 ねこ缶（クッキーがつなぐ輪）",
+    "desc": "東京 泉屋 ねこ缶〜クッキーがつなぐ輪〜18個入。",
+    "price": "日本售價 JP¥1,944（含稅）",
+    "qty": "18個入",
+    "priceJPY": 1944,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p50-4.jpg",
+      "images/p50-5.jpg",
+      "images/p50-6.jpg",
+      "images/p50-7.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "バタリークッキー（60枚）",
+    "desc": "名古屋 Buttery バタリークッキー60枚入（賞味期限較短，下單前請先詢問）。",
+    "price": "日本售價 JP¥3,240（含稅）",
+    "qty": "60枚入",
+    "priceJPY": 3240,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p51-4.jpg",
+      "images/p51-5.jpg",
+      "images/p51-6.jpg",
+      "images/p51-7.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "アンファン リスと猫缶",
+    "desc": "東京 アンファン リスと猫缶（アイシングクッキー＋金平糖・16個入）。",
+    "price": "日本售價 JP¥1,944（含稅）",
+    "qty": "16個入",
+    "priceJPY": 1944,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p52-4.jpg",
+      "images/p52-5.jpg",
+      "images/p52-6.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "CARAMELIFE キャラメルサンドクッキー缶",
+    "desc": "東京・目黒 CARAMELIFE キャラメルサンドクッキー缶（ソルティレモン＋チョコ2種×5個）。",
+    "price": "日本售價 JP¥3,240（含稅）",
+    "qty": "2種×5個",
+    "priceJPY": 3240,
+    "weight_g": 0,
+    "officialUrl": "",
+    "images": [
+      "images/p54-4.jpg",
+      "images/p54-5.jpg",
+      "images/p54-6.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "THEせんべい（コンソメ味）",
+    "desc": "お米のスナック専門店のコンソメ味（やみつきスイッチON！・18g×6袋入）。",
+    "price": "日本售價 JP¥540（含稅）",
+    "qty": "6袋入",
+    "priceJPY": 540,
+    "weight_g": 0,
+    "officialUrl": "https://www.kamedaseika.co.jp/",
+    "images": [
+      "images/p33-4.jpg",
+      "images/p33-5.jpg",
+      "images/p33-6.jpg",
+      "images/p33-7.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "THEせんべい（ガーリックペッパー味）",
+    "desc": "衝撃的！スパイシーな大人味。ガーリック×ペッパー（18g×6袋入）。",
+    "price": "日本售價 JP¥540（含稅）",
+    "qty": "6袋入",
+    "priceJPY": 540,
+    "weight_g": 0,
+    "officialUrl": "https://www.kamedaseika.co.jp/",
+    "images": [
+      "images/p34-4.jpg",
+      "images/p34-5.jpg",
+      "images/p34-6.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "THEせんべい セット箱（お好み3個セット）",
+    "desc": "お好みの単品商品を3個セットにしたギフトパッケージ（箱代110円＋商品代）。",
+    "price": "日本售價 JP¥1,730（含稅）",
+    "qty": "3個セット",
+    "priceJPY": 1730,
+    "weight_g": 0,
+    "officialUrl": "https://www.kamedaseika.co.jp/",
+    "images": [
+      "images/p35-4.jpg",
+      "images/p35-5.jpg",
+      "images/p35-6.jpg",
+      "images/p35-7.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "ブルターニュ クッキーアソルティ缶（23個入）",
+    "desc": "ブルターニュ 6種のバラエティ豊かなクッキーをオリジナル缶に詰め合わせ（BS-25）。",
+    "price": "日本售價 JP¥2,700（含稅）",
+    "qty": "23個入",
+    "priceJPY": 2700,
+    "weight_g": 0,
+    "officialUrl": "https://www.bretonne-bis.com/",
+    "images": [
+      "images/p01-3.jpg"
+    ],
+    "labelImg": ""
+  },
+  {
+    "title": "ガレット・ブルトンヌ アソート（20個入）",
+    "desc": "ガレット・ブルトンヌ6個・フィナンシェ7個・マドレーヌ7個の詰合せ。",
+    "price": "日本售價 JP¥5,400（含稅）",
+    "qty": "20個入",
+    "priceJPY": 5400,
+    "weight_g": 0,
+    "officialUrl": "https://www.bretonne-bis.com/",
+    "images": [
+      "images/p06-2.jpg"
+    ],
+    "labelImg": ""
   }
 ]
